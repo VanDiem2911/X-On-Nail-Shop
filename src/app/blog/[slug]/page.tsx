@@ -1,5 +1,6 @@
 "use client";
 
+
 import React, { use } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,13 +46,18 @@ export default function BlogPostDetailPage({
         </div>
 
         {/* Feature Cover Image */}
-        <div className="relative aspect-16/9 w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-neutral-100">
+        <div className="relative aspect-video w-full rounded-2xl overflow-hidden shadow-lg border border-gray-100 bg-neutral-100">
           <Image
-            src={post.image || "/images/logolala.webp"}
+            src={post.image || "/images/logo-xon.png"}
             alt={post.title}
             fill
             priority
+            unoptimized
             className="object-cover"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.src = "/images/logo-xon.png";
+            }}
           />
         </div>
 
