@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export function Footer() {
 
           {/* Col 1: Logo + tagline + description */}
           <div className="space-y-4 sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="relative block h-16 w-32">
+            <Link href="/" className="relative block h-24 w-52">
               <Image
                 src="/images/logo-xon.png"
                 alt="X-ON"
