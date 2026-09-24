@@ -1,12 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ProductCard } from "@/components/ProductCard";
 import productsData from "@/data/products.json";
 import siteContent from "@/data/site-content.json";
-import { Star, CheckCircle2, ChevronRight, ChevronLeft } from "lucide-react";
+import { Star } from "lucide-react";
+
 
 export default function HomePage() {
   const handmadeNails = productsData.slice(0, 6);
@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* 1. HERO VIDEO BANNER (16:9 ratio exactly as Flatsome) */}
-      <section className="relative w-full overflow-hidden bg-black aspect-16/9 max-h-[calc(100vh-125px)]">
+      <section className="relative w-full overflow-hidden bg-black aspect-video max-h-[calc(100vh-125px)]">
         <video
           autoPlay
           loop
@@ -216,7 +216,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {reviews.slice(0, 3).map((rev: any, idx: number) => (
+            {reviews.slice(0, 3).map((rev: { text: string; author: string; date: string }, idx: number) => (
               <div
                 key={idx}
                 className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between"
@@ -228,7 +228,7 @@ export default function HomePage() {
                     ))}
                   </div>
                   <p className="text-xs sm:text-sm text-gray-700 leading-relaxed italic">
-                    "{rev.text}"
+                    &ldquo;{rev.text}&rdquo;
                   </p>
                 </div>
                 <div className="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between text-xs">

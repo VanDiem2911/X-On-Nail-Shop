@@ -29,20 +29,19 @@ interface CartContextType {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-
-  // Load from localStorage on mount
-  useEffect(() => {
+  const [items, setItems] = useState<CartItem[]>(() => {
+    // Lazy initializer: read localStorage once at mount, avoid setState-in-effect
     try {
-      const saved = localStorage.getItem("lalafolie_cart");
-      if (saved) {
-        setItems(JSON.parse(saved));
-      }
-    } catch (e) {
-      console.error(e);
+      const saved =
+        typeof window !== "undefined"
+          ? localStorage.getItem("lalafolie_cart")
+          : null;
+      return saved ? (JSON.parse(saved) as CartItem[]) : [];
+    } catch {
+      return [];
     }
-  }, []);
+  });
+  const [isOpen, setIsOpen] = useState(false);
 
   // Save to localStorage
   useEffect(() => {

@@ -251,7 +251,7 @@ export default function SizingChartPage() {
                         Need a Custom Size?
                       </h4>
                       <p className="text-xs sm:text-sm text-neutral-600 mt-0.5 leading-relaxed">
-                        If your nails don't match standard sizes, select <span className="font-semibold text-neutral-900">"Custom Size"</span> at checkout and write your 5 finger measurements in the note to seller.
+                        If your nails don&apos;t match standard sizes, select <span className="font-semibold text-neutral-900">&ldquo;Custom Size&rdquo;</span> at checkout and write your 5 finger measurements in the note to seller.
                       </p>
                     </div>
                   </div>

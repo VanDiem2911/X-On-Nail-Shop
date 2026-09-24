@@ -256,7 +256,7 @@ export default function ProductDetailPage({
             {/* Product Details & Specs */}
             <div className="space-y-4 pt-4 border-t border-gray-100">
               <h3 className="text-sm font-bold uppercase tracking-wider text-gray-900">
-                What's Included
+                What&apos;s Included
               </h3>
               <ul className="text-xs text-gray-600 space-y-1.5 list-disc pl-4">
                 <li>10 Custom Handmade Press-On Nails</li>

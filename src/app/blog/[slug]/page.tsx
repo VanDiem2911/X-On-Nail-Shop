@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import siteContent from "@/data/site-content.json";
-import { Calendar, ArrowLeft, ArrowRight, Share2 } from "lucide-react";
+import { Calendar, ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function BlogPostDetailPage({
   params,
@@ -16,12 +16,21 @@ export default function BlogPostDetailPage({
   const resolvedParams = use(params);
   const slug = resolvedParams.slug;
 
-  const post = siteContent.blogPosts?.find((p: any) => p.slug === slug);
+interface BlogPost {
+  slug: string;
+  title: string;
+  date: string;
+  image?: string;
+  paragraphs?: string[];
+  excerpt?: string;
+}
+
+  const post = siteContent.blogPosts?.find((p: BlogPost) => p.slug === slug);
   if (!post) {
     notFound();
   }
 
-  const otherPosts = siteContent.blogPosts?.filter((p: any) => p.slug !== slug).slice(0, 2);
+  const otherPosts = siteContent.blogPosts?.filter((p: BlogPost) => p.slug !== slug).slice(0, 2);
 
   return (
     <div className="bg-white min-h-screen py-12 sm:py-20">
@@ -91,7 +100,7 @@ export default function BlogPostDetailPage({
               More from the Journal
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {otherPosts.map((op: any) => (
+              {otherPosts.map((op: BlogPost) => (
                 <Link
                   key={op.slug}
                   href={`/blog/${op.slug}`}

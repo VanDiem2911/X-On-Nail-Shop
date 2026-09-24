@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import gcsTabs from "@/data/gcs-tabs.json";
 import { X, ZoomIn } from "lucide-react";
 
@@ -20,7 +19,7 @@ export default function GalleryComingSoonPage() {
     { id: "new-favourite-collection", label: "NEW FAVOURITE COLLECTION" },
   ] as const;
 
-  const currentImages = (gcsTabs as any)[activeTab] || [];
+  const currentImages = (gcsTabs as Record<string, string[]>)[activeTab] || [];
 
   return (
     <div className="bg-white min-h-screen py-10 sm:py-16">
