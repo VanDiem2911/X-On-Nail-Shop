@@ -25,6 +25,7 @@ export default function HomePage() {
           controls={false}
           disablePictureInPicture
           disableRemotePlayback
+          poster="/images/IMG_7101.JPG"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
         >
           <source src="/videos/1K34PRO8E_DMCL0D.mp4" type="video/mp4" />
@@ -64,6 +65,7 @@ export default function HomePage() {
                 controls={false}
                 disablePictureInPicture
                 disableRemotePlayback
+                poster="/images/IMG_7098.JPG"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
               >
                 <source src="/videos/1K34PRO84_DMCL0D.mp4" type="video/mp4" />
@@ -80,6 +82,7 @@ export default function HomePage() {
                 controls={false}
                 disablePictureInPicture
                 disableRemotePlayback
+                poster="/images/IMG_7099.JPG"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
               >
                 <source src="/videos/1K34PRO8K_DMCL0D.mp4" type="video/mp4" />
@@ -96,6 +99,7 @@ export default function HomePage() {
                 controls={false}
                 disablePictureInPicture
                 disableRemotePlayback
+                poster="/images/IMG_7100.JPG"
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
               >
                 <source src="/videos/1K34PRO84_DMCL0D.mp4" type="video/mp4" />
