@@ -22,13 +22,16 @@ export default function HomePage() {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          controls={false}
+          disablePictureInPicture
+          disableRemotePlayback
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
         >
           <source src="/videos/1K34PRO8E_DMCL0D.mp4" type="video/mp4" />
         </video>
 
         {/* 30% Dark overlay */}
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
         {/* Buttons at bottom (y90) */}
         <div className="absolute bottom-6 sm:bottom-12 inset-x-0 z-10 flex items-center justify-start max-w-7xl mx-auto px-6 sm:px-12 gap-3 sm:gap-4">
@@ -52,39 +55,48 @@ export default function HomePage() {
         <div className="max-w-[1400px] mx-auto px-2 sm:px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
             {/* Card 1 */}
-            <div className="relative aspect-[9/15.3] rounded-lg overflow-hidden bg-black shadow-sm">
+            <div className="relative aspect-[9/15.3] rounded-lg overflow-hidden bg-black shadow-sm pointer-events-none">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover"
+                controls={false}
+                disablePictureInPicture
+                disableRemotePlayback
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
               >
                 <source src="/videos/1K34PRO84_DMCL0D.mp4" type="video/mp4" />
               </video>
             </div>
 
             {/* Card 2 */}
-            <div className="relative aspect-[9/15.3] rounded-lg overflow-hidden bg-black shadow-sm">
+            <div className="relative aspect-[9/15.3] rounded-lg overflow-hidden bg-black shadow-sm pointer-events-none">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover"
+                controls={false}
+                disablePictureInPicture
+                disableRemotePlayback
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
               >
                 <source src="/videos/1K34PRO8K_DMCL0D.mp4" type="video/mp4" />
               </video>
             </div>
 
             {/* Card 3 */}
-            <div className="relative aspect-[9/15.3] rounded-lg overflow-hidden bg-black shadow-sm">
+            <div className="relative aspect-[9/15.3] rounded-lg overflow-hidden bg-black shadow-sm pointer-events-none">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover"
+                controls={false}
+                disablePictureInPicture
+                disableRemotePlayback
+                className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
               >
                 <source src="/videos/1K34PRO84_DMCL0D.mp4" type="video/mp4" />
               </video>
