@@ -41,7 +41,7 @@ export function Header() {
     <header className="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-xs">
       {/* Top Header Row: Hamburger - Logo - Icons */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-24">
+        <div className="relative flex items-center justify-between h-24">
           {/* Left: Mobile hamburger - only on mobile/tablet */}
           <div className="flex items-center lg:hidden">
             <button
@@ -54,10 +54,10 @@ export function Header() {
           </div>
 
           {/* Left spacer on desktop (no hamburger) */}
-          <div className="hidden lg:flex items-center w-10" />
+          <div className="hidden lg:flex items-center" />
 
-          {/* Center: Main Brand Logo / Avatar */}
-          <div className="flex-1 flex justify-center">
+          {/* Center: Logo - absolutely centered always */}
+          <div className="absolute left-1/2 -translate-x-1/2">
             <Link
               href="/"
               onClick={handleLinkClick}
