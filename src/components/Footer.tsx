@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, MapPin, Mail } from "lucide-react";
 
 export function Footer() {
@@ -190,6 +191,18 @@ export function Footer() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Large Logo Section */}
+        <div className="py-10 border-b border-neutral-800 flex justify-center">
+          <Link href="/" className="relative block h-20 sm:h-28 md:h-36 w-64 sm:w-96 md:w-[500px] opacity-80 hover:opacity-100 transition-opacity">
+            <Image
+              src="/images/logo-xon.png"
+              alt="X-ON"
+              fill
+              className="object-contain brightness-0 invert"
+            />
+          </Link>
         </div>
 
         {/* Bottom Legal bar */}
