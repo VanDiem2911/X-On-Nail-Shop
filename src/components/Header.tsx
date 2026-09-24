@@ -42,8 +42,8 @@ export function Header() {
       {/* Top Header Row: Hamburger - Logo - Icons */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-24">
-          {/* Left: Mobile hamburger */}
-          <div className="flex items-center">
+          {/* Left: Mobile hamburger - only on mobile/tablet */}
+          <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileOpen(true)}
               className="p-2 text-gray-800 hover:text-black focus:outline-hidden"
@@ -52,6 +52,9 @@ export function Header() {
               <Menu className="w-6 h-6 stroke-[1.5]" />
             </button>
           </div>
+
+          {/* Left spacer on desktop (no hamburger) */}
+          <div className="hidden lg:flex items-center w-10" />
 
           {/* Center: Main Brand Logo / Avatar */}
           <div className="flex-1 flex justify-center">
